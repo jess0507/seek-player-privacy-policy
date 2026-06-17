@@ -7,7 +7,7 @@ permalink: /
 
 **Last updated:** 2026-06-09
 
-AudioLyrics ("the App") respects your privacy. This policy explains how the App collects, uses, and protects your data.
+Audio Lyrics ("the App") respects your privacy. This policy explains how the App collects, uses, and protects your data.
 
 ## 1. Information We Collect
 
@@ -57,7 +57,7 @@ We may update this policy from time to time. Changes will be posted on this page
 
 **最後更新日期 / Last updated:** 2026-06-09
 
-AudioLyrics（以下稱「本應用程式」）重視您的隱私。本政策說明本應用程式如何蒐集、使用與保護您的資料。
+音訊歌詞播放器 Audio Lyrics（以下稱「本應用程式」）重視您的隱私。本政策說明本應用程式如何蒐集、使用與保護您的資料。
 
 ---
 
