@@ -4,11 +4,61 @@ title: 隱私權政策 Privacy Policy
 permalink: /
 ---
 
+# Privacy Policy 
+
+**Last updated:** 2026-06-09
+
+AudioLyrics ("the App") respects your privacy. This policy explains how the App collects, uses, and protects your data.
+
+## 1. Information We Collect
+
+**Account data (Google Sign-In):** When you sign in with Google, we receive your email address, display name, and profile photo via Firebase Authentication, used to create and identify your account. Sign-in is optional.
+
+**Local audio files:** The App accesses audio files on your device for playback only. These files are read and played **solely on your device** and are never uploaded or transmitted to any server.
+
+**App settings & playback data:** Your playlists, playback progress, theme, and language preferences are stored **only locally on your device** (via SharedPreferences and the Isar local database).
+
+## 2. How We Use Data
+
+Data is used only to provide sign-in, play your chosen audio files, and remember your preferences. We do **not** use your data for advertising, and we do **not** sell, rent, or trade it to third parties.
+
+## 3. Third-Party Services
+
+- **Google Firebase Authentication** — https://firebase.google.com/support/privacy
+- **Google Sign-In** — https://policies.google.com/privacy
+
+## 4. Permissions
+
+| Permission | Purpose |
+|------------|---------|
+| Storage / Audio file access | Read and play audio files on your device |
+| Notifications | Show playback controls during background playback |
+
+You can revoke these permissions anytime in your device settings.
+
+## 5. Data Retention & Deletion
+
+Local data remains on your device until you clear the app's data or uninstall it. Account data is stored in Firebase; to delete your account and related data, contact us below.
+
+## 6. Children's Privacy
+
+The App is not directed to children under 13, and we do not knowingly collect personal data from children.
+
+## 7. Changes to This Policy
+
+We may update this policy from time to time. Changes will be posted on this page with an updated "Last updated" date.
+
+## 8. Contact Us
+
+**Email:** merukoo0507@gmail.com
+
+---
+
 # 隱私權政策｜Privacy Policy
 
 **最後更新日期 / Last updated:** 2026-06-09
 
-Seek Player（以下稱「本應用程式」）重視您的隱私。本政策說明本應用程式如何蒐集、使用與保護您的資料。
+AudioLyrics（以下稱「本應用程式」）重視您的隱私。本政策說明本應用程式如何蒐集、使用與保護您的資料。
 
 ---
 
@@ -92,57 +142,5 @@ Seek Player（以下稱「本應用程式」）重視您的隱私。本政策說
 ## 8. 聯絡我們
 
 如對本隱私權政策有任何疑問，請透過以下方式聯絡：
-
-**Email:** merukoo0507@gmail.com
-
----
-
----
-
-# Privacy Policy (English)
-
-**Last updated:** 2026-06-09
-
-Seek Player ("the App") respects your privacy. This policy explains how the App collects, uses, and protects your data.
-
-## 1. Information We Collect
-
-**Account data (Google Sign-In):** When you sign in with Google, we receive your email address, display name, and profile photo via Firebase Authentication, used to create and identify your account. Sign-in is optional.
-
-**Local audio files:** The App accesses audio files on your device for playback only. These files are read and played **solely on your device** and are never uploaded or transmitted to any server.
-
-**App settings & playback data:** Your playlists, playback progress, theme, and language preferences are stored **only locally on your device** (via SharedPreferences and the Isar local database).
-
-## 2. How We Use Data
-
-Data is used only to provide sign-in, play your chosen audio files, and remember your preferences. We do **not** use your data for advertising, and we do **not** sell, rent, or trade it to third parties.
-
-## 3. Third-Party Services
-
-- **Google Firebase Authentication** — https://firebase.google.com/support/privacy
-- **Google Sign-In** — https://policies.google.com/privacy
-
-## 4. Permissions
-
-| Permission | Purpose |
-|------------|---------|
-| Storage / Audio file access | Read and play audio files on your device |
-| Notifications | Show playback controls during background playback |
-
-You can revoke these permissions anytime in your device settings.
-
-## 5. Data Retention & Deletion
-
-Local data remains on your device until you clear the app's data or uninstall it. Account data is stored in Firebase; to delete your account and related data, contact us below.
-
-## 6. Children's Privacy
-
-The App is not directed to children under 13, and we do not knowingly collect personal data from children.
-
-## 7. Changes to This Policy
-
-We may update this policy from time to time. Changes will be posted on this page with an updated "Last updated" date.
-
-## 8. Contact Us
 
 **Email:** merukoo0507@gmail.com

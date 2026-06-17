@@ -6,7 +6,7 @@ on:
   push:
     branches: [master]
     paths:
-      - "**/*.md"
+      - "*.md"
       - "_config.yml"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
