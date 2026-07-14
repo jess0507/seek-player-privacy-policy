@@ -1,7 +1,14 @@
-const APK_URL =
-  'https://github.com/jess0507/Lyrics-Player/releases/latest/download/app-release.apk'
-const RELEASES_URL = 'https://github.com/jess0507/Lyrics-Player/releases'
-const LATEST_VERSION = 'v1.2.4'
+import { useEffect, useState } from 'react'
+
+// 版本號 runtime 向 GitHub 查最新 release 的 tag;API 失敗(離線、rate limit)時退回此值。
+// release workflow 先上傳 GCS 再建立 GitHub Release,故查得到 release 時 GCS 檔案必已存在。
+const FALLBACK_VERSION = 'v1.2.6'
+const LATEST_RELEASE_API =
+  'https://api.github.com/repos/jess0507/lyrics-player-app/releases/latest'
+
+// APK 發佈於 GCS 公開 bucket(見 seek_player release.yml),檔名帶不含 v 前綴的版本號
+const apkUrl = (version: string) =>
+  `https://storage.googleapis.com/seek-player-f724e-apk/app-release-${version.replace(/^v/, '')}.apk`
 
 const features = [
   { emoji: '⭐', text: 'Ad-Free｜無廣告' },
@@ -12,6 +19,17 @@ const features = [
 ]
 
 export default function Home() {
+  const [version, setVersion] = useState(FALLBACK_VERSION)
+
+  useEffect(() => {
+    fetch(LATEST_RELEASE_API)
+      .then((res) => (res.ok ? res.json() : Promise.reject(res.status)))
+      .then((data: { tag_name?: string }) => {
+        if (data.tag_name) setVersion(data.tag_name)
+      })
+      .catch(() => {})
+  }, [])
+
   return (
     <div className="relative overflow-hidden rounded-2xl bg-white/70 p-8 shadow-sm backdrop-blur sm:p-12">
       {/* 裝飾幾何圖形(參考 Play Store 視覺) */}
@@ -44,7 +62,7 @@ export default function Home() {
 
         <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row">
           <a
-            href={APK_URL}
+            href={apkUrl(version)}
             className="inline-flex items-center gap-2 rounded-full bg-green-500 px-8 py-3 text-lg font-bold text-white shadow-md transition-colors hover:bg-green-600"
           >
             <svg
@@ -57,16 +75,8 @@ export default function Home() {
               <path d="M5 19a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1z" />
             </svg>
             Download APK
-            <span className="text-sm font-normal">{LATEST_VERSION}</span>
           </a>
-          <a
-            href={RELEASES_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-gray-500 underline-offset-2 hover:text-gray-700 hover:underline"
-          >
-            所有版本 All releases
-          </a>
+          <span className="text-sm text-gray-500">{version}</span>
         </div>
       </div>
     </div>
