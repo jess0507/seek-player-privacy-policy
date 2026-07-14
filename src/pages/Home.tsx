@@ -1,5 +1,6 @@
 const APK_URL =
   'https://github.com/jess0507/Lyrics-Player/releases/latest/download/app-release.apk'
+const RELEASES_URL = 'https://github.com/jess0507/Lyrics-Player/releases'
 const LATEST_VERSION = 'v1.2.4'
 
 const features = [
@@ -55,9 +56,16 @@ export default function Home() {
               <path d="M12 3a1 1 0 0 1 1 1v9.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0l-5-5a1 1 0 1 1 1.414-1.414L11 13.586V4a1 1 0 0 1 1-1z" />
               <path d="M5 19a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1z" />
             </svg>
-            Download APK
+            Download APK {LATEST_VERSION}
           </a>
-          <span className="text-sm text-gray-500">{LATEST_VERSION}</span>
+          <a
+            href={RELEASES_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-gray-500 underline-offset-2 hover:text-gray-700 hover:underline"
+          >
+            所有版本 All releases
+          </a>
         </div>
       </div>
     </div>
