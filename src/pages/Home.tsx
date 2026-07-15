@@ -10,6 +10,46 @@ const LATEST_RELEASE_API =
 const apkUrl = (version: string) =>
   `https://storage.googleapis.com/seek-player-f724e-apk/app-release-${version.replace(/^v/, '')}.apk`
 
+// 截圖展示卡(參考 Play Store 視覺:淡色漸層背景 + 粗體標題 + 手機截圖)
+const screenshots = [
+  {
+    src: '/screenshots/2.jpg',
+    title: 'Auto-sync Lyrics',
+    subtitle: '自動同步歌詞,對齊音檔',
+    gradient: 'from-sky-100 via-slate-50 to-rose-50',
+  },
+  {
+    src: '/screenshots/1.jpg',
+    title: 'Easy Control',
+    subtitle: '快轉倒轉,操作直覺',
+    gradient: 'from-blue-100 via-sky-50 to-indigo-50',
+  },
+  {
+    src: '/screenshots/5.jpg',
+    title: 'Statistics',
+    subtitle: '聆聽時長與播放統計',
+    gradient: 'from-sky-100 via-blue-50 to-slate-50',
+  },
+  {
+    src: '/screenshots/3.jpg',
+    title: 'Local Music',
+    subtitle: '本機音樂,離線播放',
+    gradient: 'from-rose-50 via-slate-50 to-sky-100',
+  },
+  {
+    src: '/screenshots/4.jpg',
+    title: 'Playlists',
+    subtitle: '建立播放清單與最愛',
+    gradient: 'from-indigo-50 via-sky-50 to-blue-100',
+  },
+  {
+    src: '/screenshots/6.jpg',
+    title: 'Personalization',
+    subtitle: '主題色與個人化設定',
+    gradient: 'from-slate-50 via-sky-50 to-rose-100',
+  },
+]
+
 const features = [
   { emoji: '⭐', text: 'Ad-Free｜無廣告' },
   { emoji: '🎵', text: 'Local & offline｜本機離線播放' },
@@ -77,6 +117,28 @@ export default function Home() {
             Download APK
           </a>
           <span className="text-sm text-gray-500">{version}</span>
+        </div>
+
+        <div className="mt-14 grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {screenshots.map(({ src, title, subtitle, gradient }) => (
+            <figure
+              key={src}
+              className={`flex flex-col items-center rounded-2xl bg-gradient-to-b ${gradient} px-6 pb-0 pt-8 text-center shadow-sm`}
+            >
+              <figcaption>
+                <h3 className="text-2xl font-extrabold tracking-tight text-gray-900">
+                  {title}
+                </h3>
+                <p className="mt-1 text-sm text-gray-600">{subtitle}</p>
+              </figcaption>
+              <img
+                src={src}
+                alt={`${title} 畫面截圖`}
+                loading="lazy"
+                className="mt-6 w-full max-w-[240px] rounded-t-[1.75rem] border-4 border-b-0 border-gray-800 shadow-lg"
+              />
+            </figure>
+          ))}
         </div>
       </div>
     </div>
